@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/routes.dart';
+import 'routes.dart';
 
+// statefull button
+//import 'statefulButton.dart';
+//void main() {
+//  runApp(
+//    new MaterialApp(
+//      home: new AwesomeButton(),
+//    )
+//  );
+//}
+
+// routes
 void main() {
-  runApp(
-    new MaterialApp(
-      title: 'Hello World App',
-      home: new MyStatelessWidget(),
-    )
-  );
+  runApp(new MaterialApp(
+    home: new HomePage(),
+    routes: <String, WidgetBuilder> {
+      "/SecondPage": (BuildContext context) => new SecondPage()
+    },
+  ));
 }
 
 class MyStatelessWidget extends StatelessWidget {
